@@ -1,0 +1,35 @@
+
+---Downloaded files---
+The import files for: Company Elementor were successfully downloaded!
+Initial max execution time = 3600
+Files info:
+Site URL = https://simsodep.local.com:444
+Data file = D:\xampp7\www\simsodep.local.com/wp-content/uploads/2023/09/demo-content-import-file_2023-09-21__16-02-21.xml
+Widget file = D:\xampp7\www\simsodep.local.com/wp-content/uploads/2023/09/demo-widgets-import-file_2023-09-21__16-02-21.json
+Customizer file = not defined!
+Redux files:
+pix_options -> D:\xampp7\www\simsodep.local.com/wp-content/themes/essentials/inc/demo-content/sites/company/company-elementor-options.json 
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+---Importing widgets---
+Main Sidebar : 
+
+PixFort Search - Search - Widget already exists
+PixFort Promo Box - Call to action - Widget already exists
+Tag Cloud - No Title - Widget already exists
+PixFort Recent Posts - Recent Posts - Widget already exists
+PixFort Categories - Categories - Widget already exists
+PixFort Social Links - Social Links - Widget already exists
+
+
+
+---Importing Redux settings---
+Redux settings import for: pix_options finished successfully!

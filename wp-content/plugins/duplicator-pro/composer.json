@@ -1,0 +1,50 @@
+{
+    "name": "snapcreek/duplicator-pro",
+    "type": "project",
+    "autoload": {
+    },
+    "config": {
+        "platform-check": false,
+        "ignore-platform-req": "php",
+        "allow-plugins": {
+            "mcaskill/composer-exclude-files": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "exclude-from-files": [
+            "phpstan/phpstan/bootstrap.php",
+            "symfony/polyfill-php73/bootstrap.php"
+        ]
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.6.20",
+        "phpseclib/phpseclib": "3.0.14"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.8",
+        "squizlabs/php_codesniffer": "*",
+        "szepeviktor/phpstan-wordpress": "^1.1",
+        "phpstan/extension-installer": "^1.1",
+        "mcaskill/composer-exclude-files": "^2.1"
+    },
+    "scripts": {
+        "phpcs": "./vendor/bin/phpcs --standard=./.circleci/ruleset.xml ",
+        "phpcbf": "./vendor/bin/phpcbf --standard=./.circleci/ruleset.xml --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 -w ",
+        "phpstan": "./vendor/bin/phpstan analyse -c .circleci/phpstan.neon",
+        "clear-vendor": "php ./tools/vendor-cleanup.php",
+        "rebuild": [
+            "@clear-vendor",
+            "composer clearcache",
+            "composer install"
+        ],
+        "rebuild-no-dev": [
+            "@clear-vendor",
+            "composer clearcache",
+            "composer install --no-dev"
+        ],
+        "test_input": "echo ",
+        "deploy": "php ./tools/deploy.php"
+    }
+}
